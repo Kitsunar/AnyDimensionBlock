@@ -5,10 +5,11 @@ Mod NeoForge 1.21.1 — Crée des portails vers des dimensions remplies de n'imp
 ## Craft de la Baguette Dimensionnelle
 
 ```
-_ _ B
+_ _ E
 _ B _
 S _ _
 ```
+- **E** = Ender Pearl
 - **B** = Blaze Rod
 - **S** = Nether Star
 
