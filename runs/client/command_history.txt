@@ -1,0 +1,16 @@
+/give Dev anydimensionblock:dimension_wand
+/give Dev
+/give Dev anydimensionblock:dimension_wand
+/reload
+/recipe give @p anydimensionblock:dimension_wand
+/reload
+/kubejs reload
+/kubejs reload server-scripts
+/kubejs reload
+/kubejs reload server-scripts
+/give Dev anydimensionblock:dimension_wand
+/kubejs reload server-scripts
+/recipes show anydimensionblock:dimension_wand
+/kubejs reload server-scripts
+/kubejs reload client-scripts
+/kubejs reload server-scripts

@@ -1,0 +1,10 @@
+{
+  "item.anydimensionblock.dimension_wand": "Baguette Dimensionnelle",
+  "item.anydimensionblock.dimension_wand.tooltip1": "Clic droit sur un cadre de blocs pour activer le portail.",
+  "item.anydimensionblock.dimension_wand.tooltip2": "Minimum : cadre 4×5 de blocs pleins identiques.",
+  "item.anydimensionblock.dimension_wand.invalid_block": "Ce bloc ne peut pas former un portail.",
+  "item.anydimensionblock.dimension_wand.not_solid": "Le bloc doit être solide (plein).",
+  "item.anydimensionblock.dimension_wand.no_frame": "Aucun cadre valide de '%s' trouvé (min 4×5).",
+  "item.anydimensionblock.dimension_wand.activated": "Portail vers la dimension de '%s' activé !",
+  "item.anydimensionblock.dimension_wand.no_frame_near": "Aucun bloc de cadre solide trouvé à proximité."
+}

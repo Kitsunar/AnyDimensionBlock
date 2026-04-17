@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "axis=x": { "model": "anydimensionblock:block/dim_portal_x" },
+    "axis=z": { "model": "anydimensionblock:block/dim_portal_z" }
+  }
+}

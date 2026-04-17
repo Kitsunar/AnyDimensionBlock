@@ -1,0 +1,140 @@
+---- Minecraft Crash Report ----
+// I bet Cylons wouldn't have this problem.
+
+Time: 2026-04-16 17:52:40
+Description: Mod loading failures have occurred; consult the issue messages for more details
+
+net.neoforged.neoforge.logging.CrashReportExtender$ModLoadingCrashException: Mod loading has failed
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.level.block.state.StateDefinition$Builder.validateProperty(StateDefinition.java:133) ~[neoforge-21.1.86.jar%23189!/:?] {re:classloading}
+-- Mod loading issue for: anydimensionblock --
+Details:
+	Caused by 0: java.lang.ExceptionInInitializerError
+		at TRANSFORMER/neoforge@21.1.86/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$0(DeferredRegister.java:215) ~[neoforge-21.1.86.jar%23190!/:?] {re:classloading}
+		at TRANSFORMER/neoforge@21.1.86/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$1(DeferredRegister.java:234) ~[neoforge-21.1.86.jar%23190!/:?] {re:classloading}
+		at TRANSFORMER/neoforge@21.1.86/net.neoforged.neoforge.registries.DeferredRegister.lambda$addEntries$2(DeferredRegister.java:375) ~[neoforge-21.1.86.jar%23190!/:?] {re:classloading}
+		at TRANSFORMER/neoforge@21.1.86/net.neoforged.neoforge.registries.RegisterEvent.register(RegisterEvent.java:48) ~[neoforge-21.1.86.jar%23190!/:?] {re:classloading}
+		at TRANSFORMER/neoforge@21.1.86/net.neoforged.neoforge.registries.DeferredRegister.addEntries(DeferredRegister.java:375) ~[neoforge-21.1.86.jar%23190!/:?] {re:classloading}
+		at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:26) ~[bus-8.0.2.jar%23147!/:?] {}
+		at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:350) ~[bus-8.0.2.jar%23147!/:?] {}
+		at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:329) ~[bus-8.0.2.jar%23147!/:?] {}
+		at MC-BOOTSTRAP/fml_loader@4.0.34/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.34.jar%23143!/:4.0] {}
+		at MC-BOOTSTRAP/fml_loader@4.0.34/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379) ~[loader-4.0.34.jar%23143!/:4.0] {}
+		at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[?:?] {}
+		at MC-BOOTSTRAP/fml_loader@4.0.34/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:174) ~[loader-4.0.34.jar%23143!/:4.0] {}
+		at MC-BOOTSTRAP/fml_loader@4.0.34/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377) ~[loader-4.0.34.jar%23143!/:4.0] {}
+		at MC-BOOTSTRAP/fml_loader@4.0.34/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368) ~[loader-4.0.34.jar%23143!/:4.0] {}
+		at TRANSFORMER/neoforge@21.1.86/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92) ~[neoforge-21.1.86.jar%23190!/:?] {re:classloading}
+		at TRANSFORMER/neoforge@21.1.86/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.86.jar%23190!/:?] {re:classloading}
+		at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[?:?] {}
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?] {}
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?] {}
+		at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?] {}
+
+	Mod file: /C:/Users/hisjo/Desktop/anydimensionblock-src/anydimensionblock-src/anydimensionblock/build/resources/main/
+	Failure message: Any Dimension Block (anydimensionblock) encountered an error while dispatching the net.neoforged.neoforge.registries.RegisterEvent event
+		java.lang.ExceptionInInitializerError: null
+	Mod version: 1.0.0
+	Mod issues URL: <No issues URL found>
+	Exception message: java.lang.NullPointerException: Cannot invoke "net.minecraft.world.level.block.state.properties.Property.getName()" because "p_61100_" is null
+Stacktrace:
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.level.block.state.StateDefinition$Builder.validateProperty(StateDefinition.java:133) ~[neoforge-21.1.86.jar%23189!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.level.block.state.StateDefinition$Builder.add(StateDefinition.java:125) ~[neoforge-21.1.86.jar%23189!/:?] {re:classloading}
+	at TRANSFORMER/anydimensionblock@1.0.0/com.fexa.anydimensionblock.portal.ModPortalBlock.createBlockStateDefinition(ModPortalBlock.java:55) ~[%23191!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.level.block.Block.<init>(Block.java:186) ~[neoforge-21.1.86.jar%23189!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/anydimensionblock@1.0.0/com.fexa.anydimensionblock.portal.ModPortalBlock.<init>(ModPortalBlock.java:39) ~[%23191!/:?] {re:classloading}
+	at TRANSFORMER/anydimensionblock@1.0.0/com.fexa.anydimensionblock.portal.ModPortalBlock.<clinit>(ModPortalBlock.java:30) ~[%23191!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.86/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$0(DeferredRegister.java:215) ~[neoforge-21.1.86.jar%23190!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.86/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$1(DeferredRegister.java:234) ~[neoforge-21.1.86.jar%23190!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.86/net.neoforged.neoforge.registries.DeferredRegister.lambda$addEntries$2(DeferredRegister.java:375) ~[neoforge-21.1.86.jar%23190!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.86/net.neoforged.neoforge.registries.RegisterEvent.register(RegisterEvent.java:48) ~[neoforge-21.1.86.jar%23190!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.86/net.neoforged.neoforge.registries.DeferredRegister.addEntries(DeferredRegister.java:375) ~[neoforge-21.1.86.jar%23190!/:?] {re:classloading}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:26) ~[bus-8.0.2.jar%23147!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:350) ~[bus-8.0.2.jar%23147!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:329) ~[bus-8.0.2.jar%23147!/:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.34/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.34.jar%23143!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.34/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379) ~[loader-4.0.34.jar%23143!/:4.0] {}
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[?:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.34/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:174) ~[loader-4.0.34.jar%23143!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.34/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377) ~[loader-4.0.34.jar%23143!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.34/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368) ~[loader-4.0.34.jar%23143!/:4.0] {}
+	at TRANSFORMER/neoforge@21.1.86/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92) ~[neoforge-21.1.86.jar%23190!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.86/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.86.jar%23190!/:?] {re:classloading}
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.1
+	Minecraft Version ID: 1.21.1
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 21.0.9, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 77955128 bytes (74 MiB) / 704643072 bytes (672 MiB) up to 8564768768 bytes (8168 MiB)
+	CPUs: 16
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD Ryzen 7 3700X 8-Core Processor             
+	Identifier: AuthenticAMD Family 23 Model 113 Stepping 0
+	Microarchitecture: Zen 2
+	Frequency (GHz): 3.59
+	Number of physical packages: 1
+	Number of physical CPUs: 8
+	Number of logical CPUs: 16
+	Graphics card #0 name: NVIDIA GeForce GTX 1660 SUPER
+	Graphics card #0 vendor: NVIDIA
+	Graphics card #0 VRAM (MiB): 6144.00
+	Graphics card #0 deviceId: VideoController1
+	Graphics card #0 versionInfo: 32.0.15.9571
+	Memory slot #0 capacity (MiB): 8192.00
+	Memory slot #0 clockSpeed (GHz): 2.13
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MiB): 8192.00
+	Memory slot #1 clockSpeed (GHz): 2.13
+	Memory slot #1 type: DDR4
+	Memory slot #2 capacity (MiB): 8192.00
+	Memory slot #2 clockSpeed (GHz): 2.13
+	Memory slot #2 type: DDR4
+	Memory slot #3 capacity (MiB): 8192.00
+	Memory slot #3 clockSpeed (GHz): 2.13
+	Memory slot #3 type: DDR4
+	Virtual memory max (MiB): 42396.99
+	Virtual memory used (MiB): 31720.54
+	Swap memory total (MiB): 9728.00
+	Swap memory used (MiB): 203.50
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 23427.26, total: 476075.00
+	Space in storage for workdir (MiB): available: 23427.26, total: 476075.00
+	JVM Flags: 1 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	ModLauncher: 11.0.4+main.d2e20e43
+	ModLauncher launch target: forgeclientuserdev
+	ModLauncher services: 
+		sponge-mixin-0.15.2+mixin.0.8.7.jar mixin PLUGINSERVICE 
+		loader-4.0.34.jar slf4jfixer PLUGINSERVICE 
+		loader-4.0.34.jar runtime_enum_extender PLUGINSERVICE 
+		at-modlauncher-10.0.1.jar accesstransformer PLUGINSERVICE 
+		loader-4.0.34.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-11.0.4.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-11.0.4.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		javafml@4.0
+		lowcodefml@4.0
+		minecraft@4.0
+	Mod List: 
+		main                                              |Any Dimension Block           |anydimensionblock             |1.0.0               |Manifest: NOSIGNATURE
+		neoforge-21.1.86.jar                              |Minecraft                     |minecraft                     |1.21.1              |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		neoforge-21.1.86.jar                              |NeoForge                      |neoforge                      |21.1.86             |Manifest: NOSIGNATURE
+	Crash Report UUID: f42a827d-102b-4332-86b2-3f23ebc526d8
+	FML: 4.0.34
+	NeoForge: 21.1.86

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  E",
+    " B ",
+    "N  "
+  ],
+  "key": {
+    "E": { "item": "minecraft:ender_pearl" },
+    "B": { "item": "minecraft:blaze_rod" },
+    "N": { "item": "minecraft:nether_star" }
+  },
+  "result": {
+    "item": "anydimensionblock:dimension_wand"
+  }
+}

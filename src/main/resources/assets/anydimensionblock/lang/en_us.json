@@ -1,0 +1,10 @@
+{
+  "item.anydimensionblock.dimension_wand": "Dimension Wand",
+  "item.anydimensionblock.dimension_wand.tooltip1": "Right-click on a block frame to activate the portal.",
+  "item.anydimensionblock.dimension_wand.tooltip2": "Minimum: 4×5 frame of identical solid blocks.",
+  "item.anydimensionblock.dimension_wand.invalid_block": "This block cannot form a portal.",
+  "item.anydimensionblock.dimension_wand.not_solid": "The block must be solid (full).",
+  "item.anydimensionblock.dimension_wand.no_frame": "No valid frame of '%s' found (min 4×5).",
+  "item.anydimensionblock.dimension_wand.activated": "Portal to '%s' dimension activated!",
+  "item.anydimensionblock.dimension_wand.no_frame_near": "No solid frame block found nearby."
+}
